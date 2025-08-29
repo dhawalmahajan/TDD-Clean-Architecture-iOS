@@ -25,10 +25,12 @@ final class PortfolioSummaryView: UIView {
         let l = UILabel()
         l.text = "Profit & Loss*"
         l.font = .preferredFont(forTextStyle: .body)
+//        l.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return l
     }()
     private lazy var chevron: UIImageView = {
-        let i = UIImageView(image: UIImage(systemName: "chevron.down"))
+        let i = UIImageView(image: UIImage(systemName: "arrowtriangle.down.fill"))
+        //arrowtriangle.down.fill
         i.tintColor = .label
         return i
     }()
@@ -52,6 +54,7 @@ final class PortfolioSummaryView: UIView {
         let s = UIStackView(arrangedSubviews: [left, pnlValueLabel])
         s.axis = .horizontal
         s.distribution = .fill
+        s.spacing = 6
         return s
     }()
     
