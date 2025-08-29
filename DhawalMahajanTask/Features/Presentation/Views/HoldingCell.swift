@@ -14,26 +14,38 @@ final class HoldingCell: UITableViewCell {
     private lazy var nameLabel: UILabel = {
         let l = UILabel(); 
         l.font = .preferredFont(forTextStyle: .headline);
+        l.numberOfLines = 1
+        l.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        l.setContentCompressionResistancePriority(.required, for: .vertical)
         return l
     }()
 
     private lazy var ltpLabel: UILabel = {
         let l = UILabel();
+        l.numberOfLines = 1
         l.font = .preferredFont(forTextStyle: .subheadline); l.textAlignment = .right;
+        l.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        l.setContentCompressionResistancePriority(.required, for: .vertical)
         return l
     }()
 
     private lazy var qtyLabel: UILabel = {
         let l = UILabel();
+        l.numberOfLines = 1
         l.font = .preferredFont(forTextStyle: .footnote);
         l.textColor = .secondaryLabel;
+        l.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        l.setContentCompressionResistancePriority(.required, for: .vertical)
         return l
     }()
 
     private lazy var pnlLabel: UILabel = {
         let l = UILabel();
+        l.numberOfLines = 1
         l.font = .preferredFont(forTextStyle: .subheadline);
         l.textAlignment = .right;
+        l.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        l.setContentCompressionResistancePriority(.required, for: .vertical)
         return l
     }()
 
@@ -41,6 +53,7 @@ final class HoldingCell: UITableViewCell {
         let s = UIStackView(arrangedSubviews: [nameLabel, qtyLabel])
         s.axis = .vertical;
         s.spacing = 4
+        s.distribution = .fill
         return s
     }()
 
@@ -48,7 +61,7 @@ final class HoldingCell: UITableViewCell {
         let s = UIStackView(arrangedSubviews: [ltpLabel, pnlLabel])
         s.axis = .vertical;
         s.alignment = .trailing
-        s.distribution = .fillEqually
+        s.distribution = .fill
         s.spacing = 4
         return s
     }()

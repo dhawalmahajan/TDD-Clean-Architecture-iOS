@@ -10,23 +10,27 @@ import UIKit
 final class PortfolioViewController: UIViewController {
     private let viewModel: PortfolioViewModel
     private var rows: [HoldingRowViewModel] = []
+    private var summaryHeightConstraint: NSLayoutConstraint!
     // MARK: Lazy UI
     private lazy var tableView: UITableView = {
         let t = UITableView(frame: .zero, style: .plain)
+        t.register(HoldingCell.self, forCellReuseIdentifier: HoldingCell.reuseID)
         t.dataSource = self;
         t.delegate = self
-        t.register(HoldingCell.self, forCellReuseIdentifier: HoldingCell.reuseID)
+        t.translatesAutoresizingMaskIntoConstraints = false
         t.tableFooterView = UIView()
+        t.tableFooterView?.backgroundColor = .systemBackground
         return t
     }()
+    
 
     private lazy var summaryCard: PortfolioSummaryView = {
         let v = PortfolioSummaryView()
-        v.layer.shadowColor = UIColor.black.cgColor
-        v.layer.shadowOpacity = 0.08
-        v.layer.shadowOffset = CGSize(width: 0, height: -2)
-        v.layer.shadowRadius = 6
-        v.onToggle = { [weak self] in self?.viewModel.toggleSummary() }
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.onToggle = { [weak self] in 
+            self?.summaryHeightConstraint.constant = self?.summaryCard.isExpanded ?? false ? 200 : 60
+            self?.viewModel.toggleSummary()
+        }
         return v
     }()
 
@@ -45,11 +49,16 @@ final class PortfolioViewController: UIViewController {
         viewModel.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Print actual colors
+        print("SummaryView background =", summaryCard.backgroundColor ?? .clear)
+        print("TableFooter background =", tableView.tableFooterView?.backgroundColor ?? .clear)
+    }
     private func layout() {
         view.addSubview(tableView)
         view.addSubview(summaryCard)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        summaryCard.translatesAutoresizingMaskIntoConstraints = false
+        summaryHeightConstraint = summaryCard.heightAnchor.constraint(equalToConstant: 60)
 
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -59,7 +68,8 @@ final class PortfolioViewController: UIViewController {
 
             summaryCard.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             summaryCard.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            summaryCard.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            summaryCard.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            summaryHeightConstraint
         ])
     }
 }

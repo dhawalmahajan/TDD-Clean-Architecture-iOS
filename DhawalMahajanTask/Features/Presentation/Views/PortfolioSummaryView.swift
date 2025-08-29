@@ -11,8 +11,11 @@ final class PortfolioSummaryView: UIView {
     var onToggle: (() -> Void)?
     
     private(set) var isExpanded: Bool = false
-    
-    private lazy var divider: UIView = { let v = UIView(); v.backgroundColor = .separator; return v }()
+    private lazy var divider: UIView = {
+        let v = UIView()
+        v.backgroundColor = .systemBackground
+        return v
+    }()
     
     private lazy var currentValueRow = makeRow(title: "Current value*")
     private lazy var totalInvestmentRow = makeRow(title: "Total investment*")
@@ -30,9 +33,9 @@ final class PortfolioSummaryView: UIView {
         return i
     }()
     private lazy var pnlValueLabel: UILabel = {
-        let l = UILabel();
-        l.font = .preferredFont(forTextStyle: .body);
-        l.textAlignment = .right;
+        let l = UILabel()
+        l.font = .preferredFont(forTextStyle: .body)
+        l.textAlignment = .right
         return l
     }()
     
@@ -44,11 +47,11 @@ final class PortfolioSummaryView: UIView {
     
     private lazy var headerStack: UIStackView = {
         let left = UIStackView(arrangedSubviews: [pnlTitleLabel, chevron])
-        left.axis = .horizontal;
+        left.axis = .horizontal
         left.spacing = 6
         let s = UIStackView(arrangedSubviews: [left, pnlValueLabel])
         s.axis = .horizontal
-        s.distribution = .fillEqually
+        s.distribution = .fill
         return s
     }()
     
@@ -68,7 +71,7 @@ final class PortfolioSummaryView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private func setUpUserInterface() {
-//        backgroundColor = .systemBackground
+        backgroundColor = .systemBackground
         layer.cornerRadius = 14
         layer.masksToBounds = true
         addSubview(containerStack)
@@ -79,7 +82,7 @@ final class PortfolioSummaryView: UIView {
             containerStack.topAnchor.constraint(equalTo: topAnchor, constant: 12),
             containerStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             containerStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            containerStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
+//            containerStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
             
             headerButton.topAnchor.constraint(equalTo: divider.bottomAnchor),
             headerButton.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -105,24 +108,32 @@ final class PortfolioSummaryView: UIView {
         isExpanded = expand
         [currentValueRow.stack, totalInvestmentRow.stack, todaysPNLRow.stack].forEach { $0.isHidden = !expand }
         chevron.transform = expand ? CGAffineTransform(rotationAngle: .pi) : .identity
-        if animated { UIView.transition(with: self, duration: 0.25, options: .transitionCrossDissolve, animations: { self.layoutIfNeeded() }) }
+        if animated {
+            UIView.transition(with: self, duration: 0.25, options: .transitionCrossDissolve, animations: {
+//                self.layoutIfNeeded()
+            })
+        }
     }
     
-    private func setRow(_ row: (title: UILabel, value: UILabel, stack: UIStackView), value: String, color: UIColor? = nil) {
+    private func setRow(_ row:
+                        (title: UILabel, value: UILabel, stack: UIStackView),
+                        value: String,
+                        color: UIColor? = nil
+    ) {
         row.value.text = value
         if let color = color { row.value.textColor = color }
     }
     
     private func makeRow(title: String) -> (title: UILabel, value: UILabel, stack: UIStackView) {
-        let t = UILabel(); 
-        t.text = title;
+        let t = UILabel()
+        t.text = title
         t.font = .preferredFont(forTextStyle: .body)
-        let v = UILabel(); 
-        v.textAlignment = .right;
+        let v = UILabel()
+        v.textAlignment = .right
         v.font = .preferredFont(forTextStyle: .body)
-        let s = UIStackView(arrangedSubviews: [t, v]); 
-        s.axis = .horizontal;
-        s.distribution = .fillEqually
+        let s = UIStackView(arrangedSubviews: [t, v])
+        s.axis = .horizontal
+        s.distribution = .fill
         return (t, v, s)
     }
 }
