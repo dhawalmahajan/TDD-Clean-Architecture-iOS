@@ -7,15 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028C75E32E607D9B00FE8327 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C75E22E607D9B00FE8327 /* NetworkService.swift */; };
+		028C75E52E607DC600FE8327 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C75E42E607DC600FE8327 /* NetworkServiceImpl.swift */; };
+		029F29A02E604B0400CC01AE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F299F2E604B0400CC01AE /* AppCoordinator.swift */; };
+		029F29AD2E6055F600CC01AE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29AC2E6055F600CC01AE /* Container.swift */; };
+		029F29B02E6056B700CC01AE /* Holding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29AF2E6056B700CC01AE /* Holding.swift */; };
+		029F29B22E6056D900CC01AE /* PortfolioSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29B12E6056D900CC01AE /* PortfolioSummary.swift */; };
+		029F29B42E60570E00CC01AE /* HoldingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29B32E60570E00CC01AE /* HoldingsRepository.swift */; };
+		029F29B62E60573400CC01AE /* GetHoldingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29B52E60573400CC01AE /* GetHoldingsUseCase.swift */; };
+		029F29B82E60577300CC01AE /* CalculateSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29B72E60577300CC01AE /* CalculateSummaryUseCase.swift */; };
+		029F29BA2E60579A00CC01AE /* HoldingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29B92E60579A00CC01AE /* HoldingDTO.swift */; };
+		029F29BC2E6057CC00CC01AE /* HoldingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29BB2E6057CC00CC01AE /* HoldingMapper.swift */; };
+		029F29C02E60580D00CC01AE /* HoldingsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29BF2E60580D00CC01AE /* HoldingsRemoteDataSource.swift */; };
+		029F29C22E60584000CC01AE /* HoldingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29C12E60584000CC01AE /* HoldingsRepositoryImpl.swift */; };
+		029F29C42E60587500CC01AE /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29C32E60587500CC01AE /* CurrencyFormatter.swift */; };
+		029F29C62E60588B00CC01AE /* UIColor+PNL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29C52E60588B00CC01AE /* UIColor+PNL.swift */; };
+		029F29C82E6058A900CC01AE /* PortfolioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29C72E6058A900CC01AE /* PortfolioCoordinator.swift */; };
+		029F29CA2E6058C700CC01AE /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29C92E6058C700CC01AE /* PortfolioViewModel.swift */; };
+		029F29CC2E60592D00CC01AE /* HoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29CB2E60592D00CC01AE /* HoldingCell.swift */; };
+		029F29CE2E60594D00CC01AE /* PortfolioSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29CD2E60594D00CC01AE /* PortfolioSummaryView.swift */; };
+		029F29D02E60598300CC01AE /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29CF2E60598300CC01AE /* PortfolioViewController.swift */; };
+		029F29DA2E60602300CC01AE /* HoldingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29D92E60602300CC01AE /* HoldingTests.swift */; };
+		029F29DC2E60603600CC01AE /* CalculatePortfolioUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29DB2E60603600CC01AE /* CalculatePortfolioUseCaseTests.swift */; };
+		029F29DE2E606B2E00CC01AE /* HoldingDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29DD2E606B2E00CC01AE /* HoldingDTOTests.swift */; };
+		029F29E02E606B3C00CC01AE /* HoldingMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29DF2E606B3C00CC01AE /* HoldingMapperTests.swift */; };
+		029F29E22E606B4700CC01AE /* HoldingsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29E12E606B4700CC01AE /* HoldingsRepositoryImplTests.swift */; };
+		029F29E42E606B6500CC01AE /* PortfolioViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29E32E606B6500CC01AE /* PortfolioViewModelTests.swift */; };
+		029F29E62E606B7C00CC01AE /* PortfolioSummaryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29E52E606B7C00CC01AE /* PortfolioSummaryViewTests.swift */; };
+		029F29E82E606B8800CC01AE /* PortfolioCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29E72E606B8800CC01AE /* PortfolioCoordinatorTests.swift */; };
+		029F29EB2E606B9C00CC01AE /* AppContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29EA2E606B9C00CC01AE /* AppContainerTests.swift */; };
+		029F29ED2E606BBE00CC01AE /* PortfolioSummaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29EC2E606BBE00CC01AE /* PortfolioSummaryUITests.swift */; };
+		029F29EF2E606BDD00CC01AE /* PortfolioTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29EE2E606BDD00CC01AE /* PortfolioTableViewUITests.swift */; };
+		029F29F12E606BEC00CC01AE /* ExpandCollapseViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29F02E606BEC00CC01AE /* ExpandCollapseViewUITests.swift */; };
 		02F1F0F22E5F588B00B529AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F0F12E5F588B00B529AF /* AppDelegate.swift */; };
 		02F1F0F42E5F588B00B529AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F0F32E5F588B00B529AF /* SceneDelegate.swift */; };
-		02F1F0F62E5F588B00B529AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F0F52E5F588B00B529AF /* ViewController.swift */; };
-		02F1F0F92E5F588B00B529AF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 02F1F0F82E5F588B00B529AF /* Base */; };
 		02F1F0FB2E5F588E00B529AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F1F0FA2E5F588E00B529AF /* Assets.xcassets */; };
 		02F1F0FE2E5F588E00B529AF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 02F1F0FD2E5F588E00B529AF /* Base */; };
-		02F1F1092E5F588E00B529AF /* DhawalMahajanTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F1082E5F588E00B529AF /* DhawalMahajanTaskTests.swift */; };
-		02F1F1132E5F588E00B529AF /* DhawalMahajanTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F1122E5F588E00B529AF /* DhawalMahajanTaskUITests.swift */; };
-		02F1F1152E5F588E00B529AF /* DhawalMahajanTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1F1142E5F588E00B529AF /* DhawalMahajanTaskUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +63,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028C75E22E607D9B00FE8327 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		028C75E42E607DC600FE8327 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
+		029F299F2E604B0400CC01AE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		029F29AC2E6055F600CC01AE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		029F29AF2E6056B700CC01AE /* Holding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holding.swift; sourceTree = "<group>"; };
+		029F29B12E6056D900CC01AE /* PortfolioSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummary.swift; sourceTree = "<group>"; };
+		029F29B32E60570E00CC01AE /* HoldingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRepository.swift; sourceTree = "<group>"; };
+		029F29B52E60573400CC01AE /* GetHoldingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoldingsUseCase.swift; sourceTree = "<group>"; };
+		029F29B72E60577300CC01AE /* CalculateSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSummaryUseCase.swift; sourceTree = "<group>"; };
+		029F29B92E60579A00CC01AE /* HoldingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingDTO.swift; sourceTree = "<group>"; };
+		029F29BB2E6057CC00CC01AE /* HoldingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingMapper.swift; sourceTree = "<group>"; };
+		029F29BF2E60580D00CC01AE /* HoldingsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRemoteDataSource.swift; sourceTree = "<group>"; };
+		029F29C12E60584000CC01AE /* HoldingsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRepositoryImpl.swift; sourceTree = "<group>"; };
+		029F29C32E60587500CC01AE /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		029F29C52E60588B00CC01AE /* UIColor+PNL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+PNL.swift"; sourceTree = "<group>"; };
+		029F29C72E6058A900CC01AE /* PortfolioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCoordinator.swift; sourceTree = "<group>"; };
+		029F29C92E6058C700CC01AE /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		029F29CB2E60592D00CC01AE /* HoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingCell.swift; sourceTree = "<group>"; };
+		029F29CD2E60594D00CC01AE /* PortfolioSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryView.swift; sourceTree = "<group>"; };
+		029F29CF2E60598300CC01AE /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		029F29D92E60602300CC01AE /* HoldingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingTests.swift; sourceTree = "<group>"; };
+		029F29DB2E60603600CC01AE /* CalculatePortfolioUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePortfolioUseCaseTests.swift; sourceTree = "<group>"; };
+		029F29DD2E606B2E00CC01AE /* HoldingDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingDTOTests.swift; sourceTree = "<group>"; };
+		029F29DF2E606B3C00CC01AE /* HoldingMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingMapperTests.swift; sourceTree = "<group>"; };
+		029F29E12E606B4700CC01AE /* HoldingsRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRepositoryImplTests.swift; sourceTree = "<group>"; };
+		029F29E32E606B6500CC01AE /* PortfolioViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModelTests.swift; sourceTree = "<group>"; };
+		029F29E52E606B7C00CC01AE /* PortfolioSummaryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryViewTests.swift; sourceTree = "<group>"; };
+		029F29E72E606B8800CC01AE /* PortfolioCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCoordinatorTests.swift; sourceTree = "<group>"; };
+		029F29EA2E606B9C00CC01AE /* AppContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerTests.swift; sourceTree = "<group>"; };
+		029F29EC2E606BBE00CC01AE /* PortfolioSummaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryUITests.swift; sourceTree = "<group>"; };
+		029F29EE2E606BDD00CC01AE /* PortfolioTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewUITests.swift; sourceTree = "<group>"; };
+		029F29F02E606BEC00CC01AE /* ExpandCollapseViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseViewUITests.swift; sourceTree = "<group>"; };
 		02F1F0EE2E5F588B00B529AF /* DhawalMahajanTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhawalMahajanTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F1F0F12E5F588B00B529AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F1F0F32E5F588B00B529AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02F1F0F52E5F588B00B529AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02F1F0F82E5F588B00B529AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02F1F0FA2E5F588E00B529AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F1F0FD2E5F588E00B529AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F1F0FF2E5F588E00B529AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F1F1042E5F588E00B529AF /* DhawalMahajanTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DhawalMahajanTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F1F1082E5F588E00B529AF /* DhawalMahajanTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhawalMahajanTaskTests.swift; sourceTree = "<group>"; };
 		02F1F10E2E5F588E00B529AF /* DhawalMahajanTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DhawalMahajanTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F1F1122E5F588E00B529AF /* DhawalMahajanTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhawalMahajanTaskUITests.swift; sourceTree = "<group>"; };
-		02F1F1142E5F588E00B529AF /* DhawalMahajanTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhawalMahajanTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +130,207 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		028C75E12E607D8700FE8327 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				028C75E22E607D9B00FE8327 /* NetworkService.swift */,
+				028C75E42E607DC600FE8327 /* NetworkServiceImpl.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		029F298B2E602C3100CC01AE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				029F299E2E604A6B00CC01AE /* DI */,
+				029F299D2E604A5600CC01AE /* Presentation */,
+				029F299C2E604A4E00CC01AE /* Data */,
+				029F299B2E604A4100CC01AE /* Domain */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		029F299A2E60497200CC01AE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				02F1F0F12E5F588B00B529AF /* AppDelegate.swift */,
+				02F1F0F32E5F588B00B529AF /* SceneDelegate.swift */,
+				029F299F2E604B0400CC01AE /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		029F299B2E604A4100CC01AE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				029F29A32E6054BF00CC01AE /* Usecases */,
+				029F29A22E6054B100CC01AE /* Repositories */,
+				029F29A12E60549900CC01AE /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		029F299C2E604A4E00CC01AE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				028C75E12E607D8700FE8327 /* Networking */,
+				029F29A72E60550300CC01AE /* Repositories */,
+				029F29A62E6054EF00CC01AE /* Datasources */,
+				029F29A52E6054E400CC01AE /* Mappers */,
+				029F29A42E6054DB00CC01AE /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		029F299D2E604A5600CC01AE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				029F29AB2E60555900CC01AE /* Utilities */,
+				029F29AA2E60553900CC01AE /* Views */,
+				029F29A92E60552B00CC01AE /* ViewModels */,
+				029F29A82E60551F00CC01AE /* Coordinators */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		029F299E2E604A6B00CC01AE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				029F29AC2E6055F600CC01AE /* Container.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		029F29A12E60549900CC01AE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				029F29AF2E6056B700CC01AE /* Holding.swift */,
+				029F29B12E6056D900CC01AE /* PortfolioSummary.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		029F29A22E6054B100CC01AE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				029F29B32E60570E00CC01AE /* HoldingsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		029F29A32E6054BF00CC01AE /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				029F29B52E60573400CC01AE /* GetHoldingsUseCase.swift */,
+				029F29B72E60577300CC01AE /* CalculateSummaryUseCase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		029F29A42E6054DB00CC01AE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				029F29B92E60579A00CC01AE /* HoldingDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		029F29A52E6054E400CC01AE /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				029F29BB2E6057CC00CC01AE /* HoldingMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		029F29A62E6054EF00CC01AE /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				029F29BF2E60580D00CC01AE /* HoldingsRemoteDataSource.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		029F29A72E60550300CC01AE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				029F29C12E60584000CC01AE /* HoldingsRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		029F29A82E60551F00CC01AE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				029F29C72E6058A900CC01AE /* PortfolioCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		029F29A92E60552B00CC01AE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				029F29C92E6058C700CC01AE /* PortfolioViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		029F29AA2E60553900CC01AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				029F29CB2E60592D00CC01AE /* HoldingCell.swift */,
+				029F29CD2E60594D00CC01AE /* PortfolioSummaryView.swift */,
+				029F29CF2E60598300CC01AE /* PortfolioViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		029F29AB2E60555900CC01AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				029F29C32E60587500CC01AE /* CurrencyFormatter.swift */,
+				029F29C52E60588B00CC01AE /* UIColor+PNL.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		029F29D52E605FB400CC01AE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				029F29D92E60602300CC01AE /* HoldingTests.swift */,
+				029F29DB2E60603600CC01AE /* CalculatePortfolioUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		029F29D72E605FD000CC01AE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				029F29DD2E606B2E00CC01AE /* HoldingDTOTests.swift */,
+				029F29DF2E606B3C00CC01AE /* HoldingMapperTests.swift */,
+				029F29E12E606B4700CC01AE /* HoldingsRepositoryImplTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		029F29D82E605FDB00CC01AE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				029F29E32E606B6500CC01AE /* PortfolioViewModelTests.swift */,
+				029F29E52E606B7C00CC01AE /* PortfolioSummaryViewTests.swift */,
+				029F29E72E606B8800CC01AE /* PortfolioCoordinatorTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		029F29E92E606B9300CC01AE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				029F29EA2E606B9C00CC01AE /* AppContainerTests.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		02F1F0E52E5F588B00B529AF = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +354,8 @@
 		02F1F0F02E5F588B00B529AF /* DhawalMahajanTask */ = {
 			isa = PBXGroup;
 			children = (
-				02F1F0F12E5F588B00B529AF /* AppDelegate.swift */,
-				02F1F0F32E5F588B00B529AF /* SceneDelegate.swift */,
-				02F1F0F52E5F588B00B529AF /* ViewController.swift */,
-				02F1F0F72E5F588B00B529AF /* Main.storyboard */,
+				029F299A2E60497200CC01AE /* Application */,
+				029F298B2E602C3100CC01AE /* Features */,
 				02F1F0FA2E5F588E00B529AF /* Assets.xcassets */,
 				02F1F0FC2E5F588E00B529AF /* LaunchScreen.storyboard */,
 				02F1F0FF2E5F588E00B529AF /* Info.plist */,
@@ -113,7 +366,10 @@
 		02F1F1072E5F588E00B529AF /* DhawalMahajanTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				02F1F1082E5F588E00B529AF /* DhawalMahajanTaskTests.swift */,
+				029F29E92E606B9300CC01AE /* DI */,
+				029F29D82E605FDB00CC01AE /* Presentation */,
+				029F29D72E605FD000CC01AE /* Data */,
+				029F29D52E605FB400CC01AE /* Domain */,
 			);
 			path = DhawalMahajanTaskTests;
 			sourceTree = "<group>";
@@ -121,8 +377,9 @@
 		02F1F1112E5F588E00B529AF /* DhawalMahajanTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
-				02F1F1122E5F588E00B529AF /* DhawalMahajanTaskUITests.swift */,
-				02F1F1142E5F588E00B529AF /* DhawalMahajanTaskUITestsLaunchTests.swift */,
+				029F29EC2E606BBE00CC01AE /* PortfolioSummaryUITests.swift */,
+				029F29EE2E606BDD00CC01AE /* PortfolioTableViewUITests.swift */,
+				029F29F02E606BEC00CC01AE /* ExpandCollapseViewUITests.swift */,
 			);
 			path = DhawalMahajanTaskUITests;
 			sourceTree = "<group>";
@@ -233,7 +490,6 @@
 			files = (
 				02F1F0FB2E5F588E00B529AF /* Assets.xcassets in Resources */,
 				02F1F0FE2E5F588E00B529AF /* Base in Resources */,
-				02F1F0F92E5F588B00B529AF /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +514,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F1F0F62E5F588B00B529AF /* ViewController.swift in Sources */,
+				029F29CE2E60594D00CC01AE /* PortfolioSummaryView.swift in Sources */,
+				029F29CC2E60592D00CC01AE /* HoldingCell.swift in Sources */,
+				028C75E32E607D9B00FE8327 /* NetworkService.swift in Sources */,
+				029F29BC2E6057CC00CC01AE /* HoldingMapper.swift in Sources */,
+				029F29C62E60588B00CC01AE /* UIColor+PNL.swift in Sources */,
+				029F29CA2E6058C700CC01AE /* PortfolioViewModel.swift in Sources */,
+				029F29B02E6056B700CC01AE /* Holding.swift in Sources */,
+				029F29B62E60573400CC01AE /* GetHoldingsUseCase.swift in Sources */,
+				029F29D02E60598300CC01AE /* PortfolioViewController.swift in Sources */,
 				02F1F0F22E5F588B00B529AF /* AppDelegate.swift in Sources */,
+				029F29BA2E60579A00CC01AE /* HoldingDTO.swift in Sources */,
+				029F29B42E60570E00CC01AE /* HoldingsRepository.swift in Sources */,
+				029F29A02E604B0400CC01AE /* AppCoordinator.swift in Sources */,
+				029F29C82E6058A900CC01AE /* PortfolioCoordinator.swift in Sources */,
+				028C75E52E607DC600FE8327 /* NetworkServiceImpl.swift in Sources */,
+				029F29C22E60584000CC01AE /* HoldingsRepositoryImpl.swift in Sources */,
+				029F29AD2E6055F600CC01AE /* Container.swift in Sources */,
+				029F29B22E6056D900CC01AE /* PortfolioSummary.swift in Sources */,
+				029F29B82E60577300CC01AE /* CalculateSummaryUseCase.swift in Sources */,
 				02F1F0F42E5F588B00B529AF /* SceneDelegate.swift in Sources */,
+				029F29C42E60587500CC01AE /* CurrencyFormatter.swift in Sources */,
+				029F29C02E60580D00CC01AE /* HoldingsRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +543,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F1F1092E5F588E00B529AF /* DhawalMahajanTaskTests.swift in Sources */,
+				029F29E82E606B8800CC01AE /* PortfolioCoordinatorTests.swift in Sources */,
+				029F29E02E606B3C00CC01AE /* HoldingMapperTests.swift in Sources */,
+				029F29E42E606B6500CC01AE /* PortfolioViewModelTests.swift in Sources */,
+				029F29DC2E60603600CC01AE /* CalculatePortfolioUseCaseTests.swift in Sources */,
+				029F29E62E606B7C00CC01AE /* PortfolioSummaryViewTests.swift in Sources */,
+				029F29E22E606B4700CC01AE /* HoldingsRepositoryImplTests.swift in Sources */,
+				029F29DA2E60602300CC01AE /* HoldingTests.swift in Sources */,
+				029F29DE2E606B2E00CC01AE /* HoldingDTOTests.swift in Sources */,
+				029F29EB2E606B9C00CC01AE /* AppContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +559,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F1F1132E5F588E00B529AF /* DhawalMahajanTaskUITests.swift in Sources */,
-				02F1F1152E5F588E00B529AF /* DhawalMahajanTaskUITestsLaunchTests.swift in Sources */,
+				029F29F12E606BEC00CC01AE /* ExpandCollapseViewUITests.swift in Sources */,
+				029F29EF2E606BDD00CC01AE /* PortfolioTableViewUITests.swift in Sources */,
+				029F29ED2E606BBE00CC01AE /* PortfolioSummaryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +581,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02F1F0F72E5F588B00B529AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02F1F0F82E5F588B00B529AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02F1F0FC2E5F588E00B529AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +723,8 @@
 				INFOPLIST_FILE = DhawalMahajanTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,9 +750,8 @@
 				INFOPLIST_FILE = DhawalMahajanTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

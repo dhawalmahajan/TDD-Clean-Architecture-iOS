@@ -1,14 +1,13 @@
 //
-//  DhawalMahajanTaskTests.swift
+//  PortfolioSummaryViewTests.swift
 //  DhawalMahajanTaskTests
 //
-//  Created by Dhawal Mahajan on 27/08/25.
+//  Created by Dhawal Mahajan on 28/08/25.
 //
 
 import XCTest
-@testable import DhawalMahajanTask
 
-final class DhawalMahajanTaskTests: XCTestCase {
+final class PortfolioSummaryViewTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
