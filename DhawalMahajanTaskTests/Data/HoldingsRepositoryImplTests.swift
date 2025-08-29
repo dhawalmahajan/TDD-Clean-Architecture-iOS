@@ -6,30 +6,62 @@
 //
 
 import XCTest
+@testable import DhawalMahajanTask
 
 final class HoldingsRepositoryImplTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    private var mockRemote: MockHoldingsRemoteDataSource!
+        private var sut: HoldingsRepositoryImpl!
+        
+        override func setUp() {
+            super.setUp()
+            mockRemote = MockHoldingsRemoteDataSource()
+            sut = HoldingsRepositoryImpl(remote: mockRemote)
         }
-    }
-
+        
+        override func tearDown() {
+            mockRemote = nil
+            sut = nil
+            super.tearDown()
+        }
+        
+        func testFetchHoldings_success_returnsEntities() {
+            let expected = [
+                HoldingEntity(symbol: "UCOBANK", ltp: 120, quantity: 10, averagePrice: 100, closePrice: 110)
+            ]
+            mockRemote.result = .success(expected)
+            
+            let expectation = self.expectation(description: "Completion called")
+            
+            sut.fetchHoldings { result in
+                switch result {
+                case .success(let entities):
+                    XCTAssertEqual(entities.count, 1)
+                    XCTAssertEqual(entities.first?.symbol, "UCOBANK")
+                case .failure:
+                    XCTFail("Expected success but got failure")
+                }
+                expectation.fulfill()
+            }
+            
+            wait(for: [expectation], timeout: 1.0)
+        }
+        
+        func testFetchHoldings_failure_returnsError() {
+            enum TestError: Error { case someFailure }
+            mockRemote.result = .failure(TestError.someFailure)
+            
+            let expectation = self.expectation(description: "Completion called")
+            
+            sut.fetchHoldings { result in
+                switch result {
+                case .success:
+                    XCTFail("Expected failure but got success")
+                case .failure(let error):
+                    XCTAssertTrue(error is TestError)
+                }
+                expectation.fulfill()
+            }
+            
+            wait(for: [expectation], timeout: 1.0)
+        }
 }

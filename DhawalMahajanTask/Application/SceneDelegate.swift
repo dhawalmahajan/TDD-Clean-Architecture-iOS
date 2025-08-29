@@ -25,6 +25,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         } else {
             //TODO:  Show error screen or fallback
+            let errorVC = UIViewController()
+             errorVC.view.backgroundColor = .systemBackground
+             let label = UILabel()
+             label.text = "⚠️ App configuration failed"
+             label.textAlignment = .center
+             label.translatesAutoresizingMaskIntoConstraints = false
+             errorVC.view.addSubview(label)
+             NSLayoutConstraint.activate([
+                 label.centerXAnchor.constraint(equalTo: errorVC.view.centerXAnchor),
+                 label.centerYAnchor.constraint(equalTo: errorVC.view.centerYAnchor)
+             ])
+             window.rootViewController = errorVC
+             self.window = window
+             window.makeKeyAndVisible()
         }
                
     }

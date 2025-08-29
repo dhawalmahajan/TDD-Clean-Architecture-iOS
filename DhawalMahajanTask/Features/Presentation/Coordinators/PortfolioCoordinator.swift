@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PortfolioCoordinator {
+ class PortfolioCoordinator {
     private let navigationController: UINavigationController
     private let container: AppContainer
 

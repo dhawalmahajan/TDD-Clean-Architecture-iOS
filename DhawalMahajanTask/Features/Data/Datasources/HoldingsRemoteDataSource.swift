@@ -33,8 +33,4 @@ final class HoldingsRemoteDataSourceImpl: HoldingsRemoteDataSource {
               }
     }
 }
-final class HoldingsRemoteDataSourceStub: HoldingsRemoteDataSource {
-    func fetchHoldings(completion: @escaping (Result<[HoldingEntity], Error>) -> Void) {
-        completion(.failure(NSError(domain: "Remote not implemented", code: -1)))
-    }
-}
+
