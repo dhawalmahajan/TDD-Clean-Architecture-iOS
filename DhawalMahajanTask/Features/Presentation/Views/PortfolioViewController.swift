@@ -20,6 +20,7 @@ final class PortfolioViewController: UIViewController {
         t.translatesAutoresizingMaskIntoConstraints = false
         t.tableFooterView = UIView()
         t.tableFooterView?.backgroundColor = .systemBackground
+        t.accessibilityIdentifier = "portfolioTableView"
         return t
     }()
     
@@ -31,6 +32,7 @@ final class PortfolioViewController: UIViewController {
             self?.summaryHeightConstraint.constant = self?.summaryCard.isExpanded ?? false ? 200 : 60
             self?.viewModel.toggleSummary()
         }
+        v.accessibilityIdentifier = "portfolioSummaryCard"
         return v
     }()
 
@@ -49,12 +51,7 @@ final class PortfolioViewController: UIViewController {
         viewModel.viewDidLoad()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // Print actual colors
-        print("SummaryView background =", summaryCard.backgroundColor ?? .clear)
-        print("TableFooter background =", tableView.tableFooterView?.backgroundColor ?? .clear)
-    }
+   
     private func layout() {
         view.addSubview(tableView)
         view.addSubview(summaryCard)

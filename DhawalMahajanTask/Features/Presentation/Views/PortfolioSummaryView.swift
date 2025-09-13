@@ -14,17 +14,19 @@ final class PortfolioSummaryView: UIView {
     private lazy var divider: UIView = {
         let v = UIView()
         v.backgroundColor = .systemBackground
+        v.accessibilityIdentifier = "summaryDivider"
         return v
     }()
     
-    private lazy var currentValueRow = makeRow(title: "Current value*")
-    private lazy var totalInvestmentRow = makeRow(title: "Total investment*")
-    private lazy var todaysPNLRow = makeRow(title: "Today’s Profit & Loss*")
+    private lazy var currentValueRow = makeRow(title: "Current value*", id: "currentValueRow")
+    private lazy var totalInvestmentRow = makeRow(title: "Total investment*", id: "totalInvestmentRow")
+    private lazy var todaysPNLRow =  makeRow(title: "Today’s Profit & Loss*", id: "todaysPNLRow")
     
     private lazy var pnlTitleLabel: UILabel = {
         let l = UILabel()
         l.text = "Profit & Loss*"
         l.font = .preferredFont(forTextStyle: .body)
+        l.accessibilityIdentifier = "pnlTitleLabel"
 //        l.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return l
     }()
@@ -32,18 +34,21 @@ final class PortfolioSummaryView: UIView {
         let i = UIImageView(image: UIImage(systemName: "arrowtriangle.down.fill"))
         //arrowtriangle.down.fill
         i.tintColor = .label
+        i.accessibilityIdentifier = "chevron"
         return i
     }()
     private lazy var pnlValueLabel: UILabel = {
         let l = UILabel()
         l.font = .preferredFont(forTextStyle: .body)
         l.textAlignment = .right
+        l.accessibilityIdentifier = "pnlValueLabel"
         return l
     }()
     
     private lazy var headerButton: UIControl = {
         let c = UIControl()
         c.addTarget(self, action: #selector(toggle), for: .touchUpInside)
+        c.accessibilityIdentifier = "summaryToggleButton"
         return c
     }()
     
@@ -127,7 +132,7 @@ final class PortfolioSummaryView: UIView {
         if let color = color { row.value.textColor = color }
     }
     
-    private func makeRow(title: String) -> (title: UILabel, value: UILabel, stack: UIStackView) {
+    private func makeRow(title: String, id: String) -> (title: UILabel, value: UILabel, stack: UIStackView) {
         let t = UILabel()
         t.text = title
         t.font = .preferredFont(forTextStyle: .body)
@@ -137,6 +142,7 @@ final class PortfolioSummaryView: UIView {
         let s = UIStackView(arrangedSubviews: [t, v])
         s.axis = .horizontal
         s.distribution = .fill
+        s.accessibilityIdentifier = id
         return (t, v, s)
     }
 }

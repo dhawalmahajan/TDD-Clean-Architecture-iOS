@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027643062E7478F100CC8712 /* PortfolioViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */; };
+		027643082E747C0000CC8712 /* PortfolioSummaryViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */; };
 		028C75E32E607D9B00FE8327 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C75E22E607D9B00FE8327 /* NetworkService.swift */; };
 		028C75E52E607DC600FE8327 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C75E42E607DC600FE8327 /* NetworkServiceImpl.swift */; };
 		029F29A02E604B0400CC01AE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F299F2E604B0400CC01AE /* AppCoordinator.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewControllerUITests.swift; sourceTree = "<group>"; };
+		027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryViewUITests.swift; sourceTree = "<group>"; };
 		028C75E22E607D9B00FE8327 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		028C75E42E607DC600FE8327 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
 		029F299F2E604B0400CC01AE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 		02F1F1112E5F588E00B529AF /* DhawalMahajanTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */,
+				027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */,
 			);
 			path = DhawalMahajanTaskUITests;
 			sourceTree = "<group>";
@@ -575,6 +581,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027643082E747C0000CC8712 /* PortfolioSummaryViewUITests.swift in Sources */,
+				027643062E7478F100CC8712 /* PortfolioViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +839,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.725f3f561da56c08.DhawalMahajanTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "DhawalMahajanTaskUITests/DhawalMahajanTaskUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -852,7 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.725f3f561da56c08.DhawalMahajanTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "DhawalMahajanTaskUITests/DhawalMahajanTaskUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DhawalMahajanTask;
