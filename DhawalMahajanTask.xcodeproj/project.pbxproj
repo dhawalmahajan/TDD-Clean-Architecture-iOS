@@ -33,6 +33,7 @@
 		029F29DC2E60603600CC01AE /* CalculateSummaryUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29DB2E60603600CC01AE /* CalculateSummaryUseCaseTests.swift */; };
 		029F29E22E606B4700CC01AE /* HoldingsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29E12E606B4700CC01AE /* HoldingsRepositoryImplTests.swift */; };
 		029F29EB2E606B9C00CC01AE /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F29EA2E606B9C00CC01AE /* AppCoordinatorTests.swift */; };
+		02CE139F2E753DBD007EE307 /* HoldingCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE139E2E753DBD007EE307 /* HoldingCellUITests.swift */; };
 		02D5625D2E61BA7A003117CB /* GetHoldingsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5625C2E61BA7A003117CB /* GetHoldingsUseCaseTests.swift */; };
 		02D5625F2E61BC79003117CB /* MockHoldingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5625E2E61BC79003117CB /* MockHoldingsRepository.swift */; };
 		02D562622E61BD81003117CB /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D562612E61BD81003117CB /* MockNetworkService.swift */; };
@@ -92,6 +93,7 @@
 		029F29DB2E60603600CC01AE /* CalculateSummaryUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSummaryUseCaseTests.swift; sourceTree = "<group>"; };
 		029F29E12E606B4700CC01AE /* HoldingsRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRepositoryImplTests.swift; sourceTree = "<group>"; };
 		029F29EA2E606B9C00CC01AE /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		02CE139E2E753DBD007EE307 /* HoldingCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingCellUITests.swift; sourceTree = "<group>"; };
 		02D5625C2E61BA7A003117CB /* GetHoldingsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoldingsUseCaseTests.swift; sourceTree = "<group>"; };
 		02D5625E2E61BC79003117CB /* MockHoldingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHoldingsRepository.swift; sourceTree = "<group>"; };
 		02D562612E61BD81003117CB /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 			children = (
 				027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */,
 				027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */,
+				02CE139E2E753DBD007EE307 /* HoldingCellUITests.swift */,
 			);
 			path = DhawalMahajanTaskUITests;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				027643082E747C0000CC8712 /* PortfolioSummaryViewUITests.swift in Sources */,
+				02CE139F2E753DBD007EE307 /* HoldingCellUITests.swift in Sources */,
 				027643062E7478F100CC8712 /* PortfolioViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

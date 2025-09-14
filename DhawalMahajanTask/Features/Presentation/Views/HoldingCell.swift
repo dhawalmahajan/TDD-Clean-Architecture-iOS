@@ -16,6 +16,7 @@ final class HoldingCell: UITableViewCell {
     l.numberOfLines = 1
     l.setContentHuggingPriority(.defaultHigh, for: .vertical)
     l.setContentCompressionResistancePriority(.required, for: .vertical)
+      l.accessibilityIdentifier = "holdingNameLabel"
     return l
   }()
 
@@ -26,6 +27,7 @@ final class HoldingCell: UITableViewCell {
     l.textAlignment = .right
     l.setContentHuggingPriority(.defaultHigh, for: .vertical)
     l.setContentCompressionResistancePriority(.required, for: .vertical)
+      l.accessibilityIdentifier = "holdingLTPLabel"
     return l
   }()
 
@@ -36,6 +38,7 @@ final class HoldingCell: UITableViewCell {
     l.textColor = .secondaryLabel
     l.setContentHuggingPriority(.defaultHigh, for: .vertical)
     l.setContentCompressionResistancePriority(.required, for: .vertical)
+      l.accessibilityIdentifier = "holdingQtyLabel"
     return l
   }()
 
@@ -46,6 +49,7 @@ final class HoldingCell: UITableViewCell {
     l.textAlignment = .right
     l.setContentHuggingPriority(.defaultHigh, for: .vertical)
     l.setContentCompressionResistancePriority(.required, for: .vertical)
+      l.accessibilityIdentifier = "holdingPNLLabel"
     return l
   }()
 
