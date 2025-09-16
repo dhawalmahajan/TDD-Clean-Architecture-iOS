@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0273F5062E76E789003FBC69 /* PortfolioViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0273F5052E76E787003FBC69 /* PortfolioViewModelOutput.swift */; };
+		0273F5082E76E7DA003FBC69 /* PortfolioViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0273F5072E76E7DA003FBC69 /* PortfolioViewModelTests.swift */; };
 		027643062E7478F100CC8712 /* PortfolioViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */; };
 		027643082E747C0000CC8712 /* PortfolioSummaryViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */; };
 		028C75E32E607D9B00FE8327 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C75E22E607D9B00FE8327 /* NetworkService.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0273F5052E76E787003FBC69 /* PortfolioViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModelOutput.swift; sourceTree = "<group>"; };
+		0273F5072E76E7DA003FBC69 /* PortfolioViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModelTests.swift; sourceTree = "<group>"; };
 		027643052E7478F000CC8712 /* PortfolioViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewControllerUITests.swift; sourceTree = "<group>"; };
 		027643072E747C0000CC8712 /* PortfolioSummaryViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryViewUITests.swift; sourceTree = "<group>"; };
 		028C75E22E607D9B00FE8327 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 		029F29D82E605FDB00CC01AE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0273F5072E76E7DA003FBC69 /* PortfolioViewModelTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 		02D562602E61BD6D003117CB /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0273F5052E76E787003FBC69 /* PortfolioViewModelOutput.swift */,
 				02D5625E2E61BC79003117CB /* MockHoldingsRepository.swift */,
 				02D562612E61BD81003117CB /* MockNetworkService.swift */,
 				02D562652E61BE87003117CB /* MockHoldingsRemoteDataSource.swift */,
@@ -567,6 +573,7 @@
 				02D562622E61BD81003117CB /* MockNetworkService.swift in Sources */,
 				02D5626E2E61D355003117CB /* HoldingsRemoteDataSourceStub.swift in Sources */,
 				02D5626A2E61D281003117CB /* MockGetHoldingsUseCase.swift in Sources */,
+				0273F5082E76E7DA003FBC69 /* PortfolioViewModelTests.swift in Sources */,
 				02D5625D2E61BA7A003117CB /* GetHoldingsUseCaseTests.swift in Sources */,
 				02D562662E61BE87003117CB /* MockHoldingsRemoteDataSource.swift in Sources */,
 				02D562642E61BDD3003117CB /* HoldingsRemoteDataSourceTests.swift in Sources */,
@@ -576,6 +583,7 @@
 				02D5625F2E61BC79003117CB /* MockHoldingsRepository.swift in Sources */,
 				029F29EB2E606B9C00CC01AE /* AppCoordinatorTests.swift in Sources */,
 				02D562682E61D03A003117CB /* SpyPortfolioCoordinator.swift in Sources */,
+				0273F5062E76E789003FBC69 /* PortfolioViewModelOutput.swift in Sources */,
 				02D5626C2E61D29D003117CB /* MockCalculateSummaryUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
